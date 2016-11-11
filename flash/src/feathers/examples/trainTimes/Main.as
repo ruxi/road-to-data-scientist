@@ -1,13 +1,21 @@
 package feathers.examples.trainTimes
 {
 
+	import feathers.controls.Button;
+	import feathers.controls.ButtonGroup;
 	import feathers.controls.StackScreenNavigator;
 	import feathers.controls.StackScreenNavigatorItem;
+	import feathers.data.ListCollection;
+	import feathers.examples.componentsExplorer.screens.ButtonGroupScreen;
+	import feathers.examples.componentsExplorer.screens.ListScreen;
 	import feathers.examples.trainTimes.screens.StationScreen;
+	import feathers.examples.trainTimes.screens.MainStationScreen;
 	import feathers.examples.trainTimes.screens.TimesScreen;
 	import feathers.examples.trainTimes.themes.TrainTimesTheme;
+	import feathers.layout.AnchorLayout;
+	import feathers.layout.AnchorLayoutData;
 	import feathers.motion.Slide;
-
+	
 	import starling.events.Event;
 
 	public class Main extends StackScreenNavigator
@@ -27,18 +35,31 @@ package feathers.examples.trainTimes
 
 			new TrainTimesTheme();
 
-			var stationScreenItem:StackScreenNavigatorItem = new StackScreenNavigatorItem(StationScreen);
+			var stationScreenItem:StackScreenNavigatorItem = new StackScreenNavigatorItem(MainStationScreen);
 			stationScreenItem.setScreenIDForPushEvent(Event.COMPLETE, TIMES_SCREEN);
 			this.addScreen(STATION_SCREEN, stationScreenItem);
-
+//
 			var timesScreenItem:StackScreenNavigatorItem = new StackScreenNavigatorItem(TimesScreen);
 			timesScreenItem.addPopEvent(Event.COMPLETE);
 			this.addScreen(TIMES_SCREEN, timesScreenItem);
+			
+//			var stationScreenItem:StackScreenNavigatorItem = new StackScreenNavigatorItem(ButtonGroupScreen);
+//			stationScreenItem.setScreenIDForPushEvent(Event.COMPLETE, TIMES_SCREEN);
+//			this.addScreen(STATION_SCREEN, stationScreenItem);
+			
+//			var timesScreenItem:StackScreenNavigatorItem = new StackScreenNavigatorItem(TimesScreen);
+//			timesScreenItem.addPopEvent(Event.COMPLETE);
+//			this.addScreen(TIMES_SCREEN, timesScreenItem);
 
 			this.rootScreenID = STATION_SCREEN;
 
 			this.pushTransition = Slide.createSlideLeftTransition();
 			this.popTransition = Slide.createSlideRightTransition();
+		}
+		private function button_triggeredHandler(event:Event):void
+		{
+			var button:Button = Button(event.currentTarget);
+			trace(button.label + " triggered.");
 		}
 	}
 }

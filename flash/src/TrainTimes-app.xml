@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/23.0">
-	<id>Main</id>
+<application xmlns="http://ns.adobe.com/air/application/21.0">
+	<id>com.feathersui.examples.TrainTimes</id>
 	<filename>Train Times</filename>
 	<name>Train Times</name>
 	<versionNumber>3.0.0</versionNumber>
@@ -10,7 +10,7 @@
 	<initialWindow>
 		<content>TrainTimes.swf</content>
 		<autoOrients>true</autoOrients>
-		<fullScreen>true</fullScreen>
+		<fullScreen>false</fullScreen>
 		<visible>true</visible>
 		<renderMode>direct</renderMode>
 		<requestedDisplayResolution>high</requestedDisplayResolution>

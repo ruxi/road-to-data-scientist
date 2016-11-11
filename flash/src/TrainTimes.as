@@ -47,7 +47,8 @@ package
 			var isPortraitOnly:Boolean = false;
 			if(Capabilities.manufacturer.indexOf("iOS") >= 0)
 			{
-				var isCurrentlyPortrait:Boolean = this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
+//				var isCurrentlyPortrait:Boolean = this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
+				var isCurrentlyPortrait:Boolean = true;
 				if(Capabilities.screenResolutionX == 1242 && Capabilities.screenResolutionY == 2208)
 				{
 					//iphone 6 plus
@@ -92,24 +93,24 @@ package
 
 			if(filePath)
 			{
-				var file:File = File.applicationDirectory.resolvePath(filePath);
-				if(file.exists)
-				{
+//				var file:File = File.applicationDirectory.resolvePath(filePath);
+//				if(file.exists)
+//				{
 					var bytes:ByteArray = new ByteArray();
-					var stream:FileStream = new FileStream();
-					stream.open(file, FileMode.READ);
-					stream.readBytes(bytes, 0, stream.bytesAvailable);
-					stream.close();
+//					var stream:FileStream = new FileStream();
+//					stream.open(file, FileMode.READ);
+//					stream.readBytes(bytes, 0, stream.bytesAvailable);
+//					stream.close();
 					this._launchImage = new Loader();
 					this._launchImage.loadBytes(bytes);
 					this.addChild(this._launchImage);
-					this._savedAutoOrients = this.stage.autoOrients;
-					this.stage.autoOrients = false;
+//					this._savedAutoOrients = this.stage.autoOrients;
+//					this.stage.autoOrients = false;
 					if(isPortraitOnly)
 					{
-						this.stage.setOrientation(StageOrientation.DEFAULT);
+//						this.stage.setOrientation(StageOrientation.DEFAULT);
 					}
-				}
+//				}
 			}
 		}
 
@@ -135,7 +136,7 @@ package
 				this.removeChild(this._launchImage);
 				this._launchImage.unloadAndStop(true);
 				this._launchImage = null;
-				this.stage.autoOrients = this._savedAutoOrients;
+//				this.stage.autoOrients = this._savedAutoOrients;
 			}
 		}
 

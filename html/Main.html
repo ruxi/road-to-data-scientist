@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RedGreenBox</title>
+    <style>
+        #divR {
+            width: 500px;
+            height: 500px;
+            background-color: green;
+            border: 2px solid black;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+        }
+        #divG {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border: 2px solid black;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 50px;
+
+        }
+        #divG:hover{
+            -moz-box-shadow: 0 0 3px #ccc;
+            -webkit-box-shadow: 0 0 3px #ccc;
+            box-shadow: 0 0 3px #ccc;
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function onDragStart(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            var style = window.getComputedStyle(event.target, null);
+            offset_data = (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY);
+            event.dataTransfer.setData("text/plain",offset_data);
+            console.log(offset_data)
+        }
+
+        function onDrop(ev) {
+            var offset;
+            try {
+                offset = event.dataTransfer.getData("text/plain").split(',');
+            }
+            catch(e) {
+                offset = offset_data.split(',');
+            }
+            var dm = document.getElementById('divG');
+            dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
+            dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
+            dm.innerHTML=(event.offsetX-250)+","+(event.offsetY-250);
+            event.preventDefault();
+            return false;
+
+        }
+        function onDragOver(event) {
+            var offset;
+            try {
+                offset = event.dataTransfer.getData("text/plain").split(',');
+            }
+            catch(e) {
+                offset = offset_data.split(',');
+            }
+            var dm = document.getElementById('divG');
+            dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
+            dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
+            dm.innerHTML=(event.offsetX-250)+","+(event.offsetY-250);
+            event.preventDefault();
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+<div id="divR" ondrop="onDrop(event)" ondragover="allowDrop(event)"  ondragover="onDragOver(event)">
+    <div id="divG"  draggable="true" ondragstart="onDragStart(event)" >
+            0,0
+    </div>
+
+</div>
+
+<br>
+
+
+</body>
+</html>

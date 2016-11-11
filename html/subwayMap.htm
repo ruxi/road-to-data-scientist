@@ -1,7 +1,7 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Subway Map</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="jquery.subwayMap-0.5.0.js"></script>
     <style type="text/css">
     body
@@ -51,14 +51,14 @@
 </head>
 <body>
     <div class="subway-map" data-columns="12" data-rows="10" data-cellSize="40" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="false" data-lineWidth="8">
-        <ul data-color="#ff4db2" data-label="jQuery Widgets">          
+        <ul data-color="rgb(85,0,251)" data-label="1.Fundamentals">
             <li data-coords="2,2" data-marker="interchange"><a href="http://jqueryui.com/demos/accordion/">Accordion</a></li>  
             <li data-coords="4,2"><a href="http://jqueryui.com/demos/autocomplete/"><a href="http://jqueryui.com/demos/autocomplete/">Auto\ncomplete</a></li>  
-            <li data-coords="5,3" data-dir="E"></li>  
-            <li data-coords="5,7" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/slider/">Slider</a></li> <!-- marker-only node -->  
-            <li data-coords="6,4" data-dir="S" data-marker="interchange" data-markerInfo="h5"><a href="http://jqueryui.com/demos/datepicker/">Date\npicker</a></li>  
-            <li data-coords="7,4"></li>  
-            <li data-coords="7.15,8" data-marker="@station" data-labelPos="E"><a href="http://jqueryui.com/demos/dialog/">Dialog</a></li>  <!-- marker-only node, moved to the right by 0.15 -->
+            <li data-coords="6,2" data-dir="E"></li>
+            <li data-coords="8,2" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/slider/">Slider</a></li> <!-- marker-only node -->
+            <li data-coords="10,2" data-dir="S" data-marker="interchange" data-markerInfo="h5"><a href="http://jqueryui.com/demos/datepicker/">Date\npicker</a></li>
+            <li data-coords="12,2"></li>
+            <li data-coords="14,2" data-marker="@station" data-labelPos="E"><a href="http://jqueryui.com/demos/dialog/">Dialog</a></li>  <!-- marker-only node, moved to the right by 0.15 -->
             <li data-coords="8,3" data-dir="E"></li>  
             <li data-coords="8,2"></li>  
             <li data-coords="9,1" data-dir="N"></li>  
@@ -72,8 +72,8 @@
             <li data-coords="2,6"><a href="http://jqueryui.com/demos/tabs/">Tabs</a></li>  
         </ul>
 
-        <ul data-color="#00ff00" data-label="jQuery Interactions" data-shiftCoords="0,-1">      
-            <li data-coords="2,6"></li> 
+        <ul data-color="rgb(36,159,233)" data-label="2.Statistics" data-shiftCoords="0,-1">
+            <li data-coords="2,10"></li>
             <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
             <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>  
             <li data-coords="6,6"></li>  
@@ -82,6 +82,85 @@
             <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>  
         </ul>
 
+        <ul data-color="rgb(102,131,53)" data-label="3.Programming" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
+
+        <ul data-color="rgb(192,196,29)" data-label="4.Machine Learning" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
+
+        <ul data-color="rgb(223,90,26)" data-label="5.TextMining/NLP" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
+
+        <ul data-color="rgb(248,0,51)" data-label="6.Visualization" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
+
+        <ul data-color="rgb(248,23,135)" data-label="7.Big Data" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
+
+        <ul data-color="rgb(28,163,66)" data-label="8.Data Ingestion" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
+
+        <ul data-color="rgb(190,73,252)" data-label="9.Data Munging" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
+
+        <ul data-color="rgb(135,56,18)" data-label="10.Toolbox" data-shiftCoords="0,-1">
+            <li data-coords="2,6"></li>
+            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
+            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>
+            <li data-coords="6,6"></li>
+            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>
+            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>
+            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>
+        </ul>
     </div>
     <div id="legend"></div>
     

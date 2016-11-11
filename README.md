@@ -9,7 +9,7 @@ http://htmlpreview.github.io/?https://raw.githubusercontent.com/yangboz/road-to-
 
 # References
 
-jQuery: http://kalyani.com/2010/10/subway-map-visualization-jquery-plugin/
+Html: http://kalyani.com/2010/10/subway-map-visualization-jquery-plugin/
 
 Flash:https://feathersui.com/examples/train-times/
 

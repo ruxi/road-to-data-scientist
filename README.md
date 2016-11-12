@@ -5,7 +5,8 @@ An app to show "Road to Data Science".
 
 # Live Preview
 
-http://htmlpreview.github.io/?https://raw.githubusercontent.com/yangboz/road-to-data-scientist/master/html/subwayMap.htm
+Html: http://htmlpreview.github.io/?https://raw.githubusercontent.com/yangboz/road-to-data-scientist/master/html/subwayMap.htm
+Flash: https://yangboz.github.io/labs/ds/
 
 # References
 
